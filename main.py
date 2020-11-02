@@ -1,4 +1,3 @@
-import pythoncom
 import win32com
 import streamlit as st
 import os
@@ -28,7 +27,7 @@ def main():
                     # Remove password using function from helpers script
                     helpers.remove_password_xlsx(file, password_string)
                     st.success(f"The password has been successfully removed from {file}")
-                except pythoncom.com_error as error:  
+                except:
                     st.error("This is not the right password")
                     st.stop()
 
